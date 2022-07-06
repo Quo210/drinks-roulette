@@ -64,9 +64,20 @@ function buildCard(target){
             li.textContent = drink.ingredients[i][1]
             children.ingredients.appendChild(li)
         }
-        children.glass.textContent = drink.glass;
-        children.type.textContent = drink.alcohol;
+        children.glass.textContent = `Type of glass: ${drink.glass}`;
+        children.type.textContent = `Type of beverage: ${drink.alcohol}`;
     })
     .catch(err => console.error(err) )
 }
 
+function getDrinkDiv(num){
+    return document.querySelector(`[data-key="${num}"]`)
+}
+
+function tripleCall(){
+    const f = getDrinkDiv; // In the name of DRY
+    const divs = [f(1),f(2),f(3)];
+    divs.forEach(div => buildCard(div))
+}
+
+tripleCall()

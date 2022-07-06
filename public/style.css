@@ -1,8 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300;400;500&display=swap');
+
 *{
     box-sizing: border-box;
 }
 
+:root{
+/* CSS HEX */
+--up-maroon: #800e13ff;
+--upsdell-red: #ad2831ff;
+--russian-violet: #30204eff;
+--plump-purple: #5a41b1ff;
+--xiketic: #0c0c1dff;
+}
+
+header{
+    background-color: var(--russian-violet);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    border-bottom: var(--plump-purple) 5px solid;
+    box-shadow: 0px 10px 10px rgba(89, 65, 177, 0.8);
+}
+
+header *{
+    margin: 0
+}
+
 html{
-    background-color: #333;
-    color: white
+    background-color: var(--xiketic);
+    color: white;
+    font-family: 'Arima', cursive;
+}
+
+div.roulette{
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    background-color: var(--russian-violet);
+    padding: 1rem;
+    margin: 2rem 0;
+    column-gap: 1rem;
+    justify-content: center;
+    border: 0 var(--plump-purple) solid;
+    border-width: 5px 0;
+
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    height: 50vh;
+    max-height: 300px;
+    align-self: center;
+    border: var(--upsdell-red) 10px inset;
+}
+
+div.drink{
+    background-color: var(--up-maroon);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border: 2px var(--xiketic) solid;
+    box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.8);
 }
