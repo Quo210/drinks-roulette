@@ -30,12 +30,7 @@ function getIngredients(entries){
     .filter( pair => pair[1] != null)
 }
 
-getRandomDrinks()
-.then(response => {
-    return new Drink(response)
-})
-.then(res => console.log(res) )
-.catch(err => console.error(err) )
+
 
 class Drink{
     constructor(obj){
@@ -47,3 +42,31 @@ class Drink{
         this.__verbose = obj
     }
 }
+
+function getCardChildren(target){
+    const elements = target.children; /* img,name,ingredients,glass,type */
+    const [img,name,ingredients,glass,type] = [elements[0],elements[1],elements[2],elements[3],elements[4]];
+    return {img,name,ingredients,glass,type} 
+}
+
+function buildCard(target){
+    const children = getCardChildren(target);
+    getRandomDrinks()
+    .then(response => {
+        return new Drink(response)
+    })
+    .then(drink => {
+        children.img.src = drink.thumbnail;
+        children.name.textContent = drink.name;
+        children.ingredients.textContent = 'Ingredients:';
+        for(let i = 0; i < drink.ingredients.length; i++){
+            const li = document.createElement('li');
+            li.textContent = drink.ingredients[i][1]
+            children.ingredients.appendChild(li)
+        }
+        children.glass.textContent = drink.glass;
+        children.type.textContent = drink.alcohol;
+    })
+    .catch(err => console.error(err) )
+}
+
