@@ -32,17 +32,18 @@ function getIngredients(entries){
 
 getRandomDrinks()
 .then(response => {
-    return drinkPresentation(response)
+    return new Drink(response)
 })
 .then(res => console.log(res) )
 .catch(err => console.error(err) )
 
-function drinkPresentation(obj){
-    return {
-        'thumbnail': obj.strDrinkThumb,
-        'name': obj.strDrink,
-        'ingredients': getIngredients(entrify(obj)),
-        'glass': obj.strGlass,
-        'alcohol': obj.strAlcoholic
+class Drink{
+    constructor(obj){
+        this['thumbnail'] = obj.strDrinkThumb,
+        this['name'] = obj.strDrink,
+        this['ingredients'] = getIngredients(entrify(obj)),
+        this['glass'] = obj.strGlass,
+        this['alcohol'] = obj.strAlcoholic,
+        this.__verbose = obj
     }
 }
