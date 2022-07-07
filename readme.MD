@@ -1,4 +1,4 @@
-Pending to add
+Pending to add (5/07)
 
 - finish touching css 
 - add a footer with a link
@@ -7,3 +7,4 @@ Pending to add
 - option to localStorage the names of the drinks the user is interested in
 - add a more complex view of a single drink with the preparation instructions and ingredient measurements, on demand
 - add something that glows 
+- i am therefore i code
