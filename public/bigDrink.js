@@ -35,7 +35,8 @@ class Drink{
 class fullDrink extends Drink{
     constructor(obj) {
         super(obj);
-        this.measures = getbyReg(entrify(obj),/strMeasure/)
+        this.measures = getbyReg(entrify(obj),/strMeasure/),
+        this.instructions = obj.strInstructions
     }
 }
 
