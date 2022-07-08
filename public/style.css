@@ -13,13 +13,23 @@
 --xiketic: #0c0c1dff;
 }
 
-header{
+.flagship{
     background-color: var(--russian-violet);
     text-align: center;
     padding: 1rem;
     color: white;
-    border-bottom: var(--plump-purple) 5px solid;
+}
+
+header{
     box-shadow: 0px 10px 10px rgba(89, 65, 177, 0.8);
+    border-bottom: var(--plump-purple) 5px solid;
+}
+
+footer{
+    box-shadow: 0px -10px 10px rgba(89, 65, 177, 0.8);
+    border-top: var(--plump-purple) 5px solid;
+    font-size: 1.2rem;
+
 }
 
 header *{
@@ -34,19 +44,22 @@ html{
 
 div.roulette{
     display: grid;
-    grid-template-columns: repeat(3,32%);
+    grid-template-columns: repeat(3,30%);
     background-color: var(--russian-violet);
     padding: 1rem;
     margin: 2rem 0;
-    column-gap: 1rem;
+    gap: 3rem;
     justify-content: center;
     border: 0 var(--plump-purple) solid;
     border-width: 5px 0;
-
 }
 
 h2{
     text-align: center;
+}
+
+h3{
+    margin: 0
 }
 
 img{
@@ -63,4 +76,14 @@ div.drink{
     padding: 1rem 2rem;
     border: 2px var(--xiketic) solid;
     box-shadow: -15px 10px 10px rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+}
+
+div.drink:hover{
+    transform: scale(1.01);
+    background-color: rgb(107, 15, 21);
+}
+
+a{
+    color: white;
 }

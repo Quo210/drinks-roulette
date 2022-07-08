@@ -58,14 +58,14 @@ function buildCard(target){
     .then(drink => {
         children.img.src = drink.thumbnail;
         children.name.textContent = drink.name;
-        children.ingredients.textContent = 'Ingredients:';
+        children.ingredients.innerHTML = '<h3>Ingredients:</h3>';
         for(let i = 0; i < drink.ingredients.length; i++){
             const li = document.createElement('li');
             li.textContent = drink.ingredients[i][1]
             children.ingredients.appendChild(li)
         }
-        children.glass.textContent = `Type of glass: ${drink.glass}`;
-        children.type.textContent = `Type of beverage: ${drink.alcohol}`;
+        children.glass.textContent += `${drink.glass}`;
+        children.type.textContent += `${drink.alcohol}`;
     })
     .catch(err => console.error(err) )
 }
@@ -81,3 +81,5 @@ function tripleCall(){
 }
 
 tripleCall()
+
+
