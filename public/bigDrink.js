@@ -13,32 +13,32 @@ function entrify(obj){
     return Object.entries(obj)
 }
 
-function getIngredients(entries){
-    const a = entries
-    .filter( pair => /strIngredient/.test(pair[0]) )
-    return Object.values(a).filter(val => val != null)
+function getbyReg(entries,regexp){
+    return entries
+    .filter( pair => regexp.test(pair[0]) )
+    .filter(arr => {
+        if(arr[1] != null) return arr[1]
+    })
+    .map(pair => pair[1])
 }
-
-
 
 class Drink{
     constructor(obj){
         this['thumbnail'] = obj.strDrinkThumb,
         this['name'] = obj.strDrink,
-        this['ingredients'] = getIngredients(entrify(obj)),
+        this['ingredients'] = getbyReg(entrify(obj),/strIngredient/),
         this['glass'] = obj.strGlass,
-        this['alcohol'] = obj.strAlcoholic,
-        this.__verbose = obj
+        this['alcohol'] = obj.strAlcoholic
     }
 }
 
 class fullDrink extends Drink{
     constructor(obj) {
         super(obj);
-        this.__verbose
+        this.measures = getbyReg(entrify(obj),/strMeasure/)
     }
 }
 
 window.onload = () => {
-    getSpecificDrink(localStorage.getItem('latest')).then(res => console.log(res))
+    getSpecificDrink(localStorage.getItem('latest')).then(res => console.log(new fullDrink(res)))
 }
