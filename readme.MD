@@ -1,19 +1,26 @@
-Pending to add (5/07)
+Pending to add / Things done
 
-<!-- - finish touching css  -->
-<!-- - add a footer with a link -->
+5/7
+
+- finish touching css 
+- add a footer with a link
 - add some form of recall/rotation for the drinks
 - build for mobile
 - option to localStorage the names of the drinks the user is interested in
-<!-- - add a more complex view of a single drink with the preparation instructions and ingredient measurements, on demand -->
-<!-- - add something that glows  -->
+- add a more complex view of a single drink with the preparation instructions and ingredient measurements, on demand
+- add something that glows 
 - i am therefore i code
 
 6/07
 
-<!-- - improve looks -->
+- improve looks
 
 7/7
 
 - added base of drink, type of glass, alcoholic or not
-- looks better
+- Finished working on the mobile version
+- uploaded to Glitch.io
+
+Pending:
+
+- 
