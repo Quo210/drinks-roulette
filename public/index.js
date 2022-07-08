@@ -27,7 +27,10 @@ function entrify(obj){
 function getIngredients(entries){
     return entries
     .filter( pair => /strIngredient/.test(pair[0]) )
-    .filter( pair => pair[1] != null)
+    .filter(arr => {
+        if(arr[1] != null) return arr[1]
+    })
+    .map(pair => pair[1])
 }
 
 
@@ -61,7 +64,7 @@ function buildCard(target){
         children.ingredients.innerHTML = '<h3>Ingredients:</h3>';
         for(let i = 0; i < drink.ingredients.length; i++){
             const li = document.createElement('li');
-            li.textContent = drink.ingredients[i][1]
+            li.textContent = drink.ingredients[i]
             children.ingredients.appendChild(li)
         }
         children.glass.textContent += `${drink.glass}`;

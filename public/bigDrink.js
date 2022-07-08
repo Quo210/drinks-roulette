@@ -14,9 +14,9 @@ function entrify(obj){
 }
 
 function getIngredients(entries){
-    return entries
+    const a = entries
     .filter( pair => /strIngredient/.test(pair[0]) )
-    .filter( pair => pair[1] != null)
+    return Object.values(a).filter(val => val != null)
 }
 
 
