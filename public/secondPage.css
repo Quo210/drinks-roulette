@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-img{
+img.drink{
     border: purple 3px groove;
     max-width: 100%;
 }
@@ -58,11 +58,11 @@ section.instructions{
     grid-column: 3 / 6;
     grid-row: span 3;
     transition: 2s;
-    box-shadow: 0px 0px 1px darkred;
+    box-shadow: inset 0px 0px 1px darkred;
 }
 
 section.instructions:hover{
-    box-shadow: 0px 0px 50px purple;
+    box-shadow: inset 0px 0px 50px purple;
     z-index: 3;
 }
 
@@ -72,4 +72,15 @@ div.extended > :not(div.press){
 
 div.extended * {
     background-color: #0c0c1dff;
+}
+
+p.type{
+    text-decoration: underline;
+    text-decoration-color: purple;
+    text-decoration-thickness: 5px;
+}
+
+img.base{
+    max-width: 100px;
+    border: none;
 }

@@ -48,11 +48,15 @@ function makeFullDrink(){
 //     getSpecificDrink(localStorage.getItem('latest')).then(res => console.log(new fullDrink(res)))
 // }
 
-function setPress(name,thumbnail){
+function setPress(name,thumbnail,glass,alcoholic){
     const h1 = document.querySelector('h1.drinkName');
     const img = document.querySelector('img');
+    const rGlass = document.querySelector('p.glass')
+    const type = document.querySelector('p.type')
     h1.textContent = name;
-    img.src = thumbnail
+    img.src = thumbnail;
+    rGlass.textContent += glass
+    type.textContent = `This beverage is ${alcoholic}`
 }
 
 function setIngredients(ingredients,measures){
@@ -66,13 +70,12 @@ function setIngredients(ingredients,measures){
 
 function setInstructions(string){
     const article = document.querySelector('article.instructions');
-    let a = string.split('.').join('<br>')
-    article.innerHTML = a;
+    article.innerHTML = string.split('.').join('<br>')
 }
 
 function serveDrink(){
     makeFullDrink().then(drink => {
-        setPress(drink.name,drink.thumbnail)
+        setPress(drink.name,drink.thumbnail,drink.glass,drink.alcohol)
         setIngredients(drink.ingredients,drink.measures);
         setInstructions(drink.instructions)
     })
