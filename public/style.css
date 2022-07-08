@@ -29,7 +29,6 @@ footer{
     box-shadow: 0px -10px 10px rgba(89, 65, 177, 0.8);
     border-top: var(--plump-purple) 5px solid;
     font-size: 1.2rem;
-
 }
 
 header *{
@@ -40,6 +39,10 @@ html{
     background-color: var(--xiketic);
     color: white;
     font-family: 'Arima', cursive;
+}
+
+body{
+    min-height: 100vh;
 }
 
 div.roulette{

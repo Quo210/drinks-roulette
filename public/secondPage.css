@@ -8,35 +8,36 @@
     }
 
 img{
-    border: none
+    border: none;
+    max-height: 800px;
 }
 
 div.extended{
-    height: 90vh;
-    max-height: 900px;
+    min-height: 80vh;
+    width: 80vw;
     display: grid;
     grid-template-columns: repeat(4,25%);
     grid-template-rows: repeat(5,20%);
     background-color: var(--russian-violet);
     padding: 1rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
     gap: 0rem;
     justify-content: center;
     border: 0 var(--plump-purple) solid;
-    border-width: 5px 0;
+    border-width: 5px;
 }
 
 div.press{
     grid-column: span 2;
-    grid-row: span 3;
+    grid-row: span 5;
 }
 
 section.ingredients{
     grid-column: span 2;
-    grid-row: span 5;
+    grid-row: span 2;
 }
 
 section.instructions{
-    grid-column: 1 / 3;
-    grid-row: span 2;
+    grid-column: 3 / 6;
+    grid-row: span 3;
 }
