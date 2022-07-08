@@ -65,7 +65,7 @@ h3{
     margin: 0
 }
 
-img{
+img#drink{
     height: 50vh;
     max-height: 300px;
     align-self: center;

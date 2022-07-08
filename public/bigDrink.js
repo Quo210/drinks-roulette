@@ -70,12 +70,24 @@ function setIngredients(ingredients,measures){
 
 function setInstructions(string){
     const article = document.querySelector('article.instructions');
-    article.innerHTML = string.split('.').join('<br>')
+    article.innerHTML = string.split('.').join('.<br>')
+}
+
+function setBase(base){
+    const baseImg = document.querySelector('img.base')
+    const baseP = document.querySelector('p.base');
+    baseP.textContent = `The base is ${base}`
+    let request = `https://www.thecocktaildb.com/images/ingredients/${base.toLowerCase()}-Medium.png`
+    fetch(request)
+    .then(ing => {
+        baseImg.src = ing.url
+    })
 }
 
 function serveDrink(){
     makeFullDrink().then(drink => {
         setPress(drink.name,drink.thumbnail,drink.glass,drink.alcohol)
+        setBase(drink.ingredients[0])
         setIngredients(drink.ingredients,drink.measures);
         setInstructions(drink.instructions)
     })
