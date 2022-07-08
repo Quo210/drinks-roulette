@@ -40,6 +40,42 @@ class fullDrink extends Drink{
     }
 }
 
-window.onload = () => {
-    getSpecificDrink(localStorage.getItem('latest')).then(res => console.log(new fullDrink(res)))
+function makeFullDrink(){
+    return getSpecificDrink(localStorage.getItem('latest')).then(res => new fullDrink(res))
 }
+
+// window.onload = () => {
+//     getSpecificDrink(localStorage.getItem('latest')).then(res => console.log(new fullDrink(res)))
+// }
+
+function setPress(name,thumbnail){
+    const h1 = document.querySelector('h1.drinkName');
+    const img = document.querySelector('img');
+    h1.textContent = name;
+    img.src = thumbnail
+}
+
+function setIngredients(ingredients,measures){
+    const ol = document.querySelector('section.ingredients ol');
+    for (let i = 0; i < ingredients.length; i++){
+        const li = document.createElement('li');
+        li.textContent = `${ingredients[i]}: ${measures[i]}`;
+        ol.appendChild(li);
+    }
+}
+
+function setInstructions(string){
+    const article = document.querySelector('article.instructions');
+    let a = string.split('.').join('<br>')
+    article.innerHTML = a;
+}
+
+function serveDrink(){
+    makeFullDrink().then(drink => {
+        setPress(drink.name,drink.thumbnail)
+        setIngredients(drink.ingredients,drink.measures);
+        setInstructions(drink.instructions)
+    })
+}
+
+serveDrink()
