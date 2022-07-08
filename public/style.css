@@ -65,9 +65,9 @@ h3{
     margin: 0
 }
 
-img#drink{
+div.drink > img{
     height: 50vh;
-    max-height: 300px;
+    max-height: 250px;
     align-self: center;
     border: var(--upsdell-red) 10px inset;
 }
