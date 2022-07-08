@@ -84,3 +84,21 @@ img.base{
     max-width: 100px;
     border: none;
 }
+
+a.homepageLink{
+    display: block;
+    background-color: #0c0c1dff;
+    padding: 0.2rem;
+    border: 5px purple solid;
+    border-radius: 20px;
+    width: 10vw;
+    min-width: 200px;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.homepageLink:hover{
+    background-color: var(--russian-violet);
+}
