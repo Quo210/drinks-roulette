@@ -1,3 +1,42 @@
+:root{
+    /* CSS HEX */
+    --up-maroon: #800e13ff;
+    --upsdell-red: #ad2831ff;
+    --russian-violet: #30204eff;
+    --plump-purple: #5a41b1ff;
+    --xiketic: #0c0c1dff;
+    }
+
 img{
     border: none
+}
+
+div.extended{
+    height: 90vh;
+    max-height: 900px;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: repeat(5,20%);
+    background-color: var(--russian-violet);
+    padding: 1rem;
+    margin: 2rem 0;
+    gap: 0rem;
+    justify-content: center;
+    border: 0 var(--plump-purple) solid;
+    border-width: 5px 0;
+}
+
+div.press{
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+section.ingredients{
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+section.instructions{
+    grid-column: 1 / 3;
+    grid-row: span 2;
 }
