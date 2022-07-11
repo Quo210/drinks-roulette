@@ -40,6 +40,10 @@ renderHistory()
 
 function renderHistory(){
     const pastDrinks = JSON.parse( localStorage.getItem('memory') );
+    if(pastDrinks == null){
+        emptyHistoryHandler()
+        return
+    }
     const target = document.querySelector('div.history');
     for (let i = 0; i < pastDrinks.length; i++){
         const a = document.createElement('a');
@@ -54,4 +58,10 @@ function renderHistory(){
         })
         target.appendChild(a)
     }
+}
+
+function emptyHistoryHandler(){
+    const target = document.querySelector('div.history');
+    target.classList.add('showNormal')
+    target.innerHTML = '<h2> ...but it seems your history is empty </h2><br>This might be because this is your first time using the page or you deleted all the information in your browser recently.<hr class="moses">All the drinks in this page are saved locally in your computer.'
 }

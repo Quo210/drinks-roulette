@@ -129,3 +129,13 @@ a.pastDrink{
 a.pastDrink:hover{
     background-color: purple;
 }
+
+.showNormal{
+    grid-template-columns: 1fr !important;
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.moses{
+    margin: 0.5rem
+}

@@ -1,26 +1,4 @@
-Pending to add / Things done
+Pending
 
-5/7
-
-- finish touching css 
-- add a footer with a link
-- add some form of recall/rotation for the drinks
-- build for mobile
-- option to localStorage the names of the drinks the user is interested in
-- add a more complex view of a single drink with the preparation instructions and ingredient measurements, on demand
-- add something that glows 
-- i am therefore i code
-
-6/07
-
-- improve looks
-
-7/7
-
-- added base of drink, type of glass, alcoholic or not
-- Finished working on the mobile version
-- uploaded to Glitch.io
-
-Pending:
-
-- 
+- Add a delete button for the visited drinks section
+- One to clear all and one to clear specific 
