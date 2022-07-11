@@ -63,7 +63,9 @@ function setIngredients(ingredients,measures){
     const ol = document.querySelector('section.ingredients ol');
     for (let i = 0; i < ingredients.length; i++){
         const li = document.createElement('li');
-        li.textContent = `${ingredients[i]}: ${measures[i]}`;
+        let measure = measures[i];
+        (measure == undefined)? measure = 'Preference - see picture.' : false;
+        li.textContent = `${ingredients[i]}: ${measure}`;
         ol.appendChild(li);
     }
 }
