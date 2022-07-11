@@ -90,3 +90,7 @@ div.drink:hover{
 a{
     color: white;
 }
+
+img{
+    max-width: 100%;
+}
