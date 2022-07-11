@@ -83,4 +83,9 @@ function tripleCall(){
     divs.forEach(div => buildCard(div))
 }
 
-tripleCall()
+tripleCall();
+
+const reroll = document.querySelector('button.reroll');
+reroll.addEventListener('click',()=>{
+    window.location.reload();
+})

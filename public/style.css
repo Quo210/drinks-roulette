@@ -139,3 +139,22 @@ a.pastDrink:hover{
 .moses{
     margin: 0.5rem
 }
+
+button.reroll{
+    display: block;
+    background-color: #0c0c1dff;
+    color: white;
+    padding: 0.5rem;
+    border: 5px purple solid;
+    border-radius: 20px;
+    width: 20vw;
+    min-width: 200px;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+button.reroll:hover{
+    background-color: var(--plump-purple);
+}
