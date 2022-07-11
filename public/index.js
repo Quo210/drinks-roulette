@@ -84,5 +84,3 @@ function tripleCall(){
 }
 
 tripleCall()
-
-

@@ -35,3 +35,23 @@ function storeLocally(string){
         localStorage.setItem('memory',JSON.stringify(oldMemory))
     }
 }
+
+renderHistory()
+
+function renderHistory(){
+    const pastDrinks = JSON.parse( localStorage.getItem('memory') );
+    const target = document.querySelector('div.history');
+    for (let i = 0; i < pastDrinks.length; i++){
+        const a = document.createElement('a');
+        a.classList.add('pastDrink');
+        a.textContent = pastDrinks[i];
+        a.addEventListener('click', () => {
+            localStorage.setItem('latest', a.textContent);
+            a.classList.add('rotate3d')
+            setTimeout(()=>{
+                window.location.href = '/extended.html'
+            },2000)
+        })
+        target.appendChild(a)
+    }
+}
