@@ -118,9 +118,23 @@ a.pastDrink{
     background-color: var(--up-maroon);
     border: var(--xiketic) 3px solid;
     min-height: 75px;
-    padding: 1rem 0;
     transition: 1.5s;
+    padding: 1rem 2rem;
+    cursor: pointer;
 }
+
+p.deleteRef{
+    display: block;
+    margin: 1em auto !important;
+    border: 0px white solid;
+    border-width: 1px 0;
+    max-width: 75px;
+ }
+ 
+p.deleteRef:hover{
+    background-color: darkred;
+    border-width: 1px;
+ }
 
 .rotate3d{
     transform: rotate3d(0,1,0,360deg);
@@ -157,4 +171,13 @@ button.reroll{
 
 button.reroll:hover{
     background-color: var(--plump-purple);
+}
+
+button.clearAll{
+    margin: 1rem auto;
+    display: block;
+    background-color: var(--plump-purple);
+    BORDER: var(--russian-violet) 2px solid;
+    color: white;
+    padding: 0.6rem;
 }
