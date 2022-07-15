@@ -56,13 +56,6 @@ function renderHistory(){
                 window.location.href = '/extended.html'
             },2000)
         });
-        const deleteThis = document.createElement('p');
-        deleteThis.classList.add('deleteRef');
-        deleteThis.textContent = 'Remove';
-        deleteThis.addEventListener('click',()=>{
-
-        })
-        a.appendChild(deleteThis);
         target.appendChild(a)
         const clearAll = document.querySelector('button.clearAll');
         clearAll.addEventListener('click',clearButtonHandler)

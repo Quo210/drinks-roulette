@@ -173,11 +173,20 @@ button.reroll:hover{
     background-color: var(--plump-purple);
 }
 
-button.clearAll{
-    margin: 1rem auto;
-    display: block;
+div.wrapClearButtons{
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.wrapClearButtons > *{
+    display: inline-block;
     background-color: var(--plump-purple);
     BORDER: var(--russian-violet) 2px solid;
     color: white;
     padding: 0.6rem;
+}
+
+button.clearAll:hover{
+    transform: scale(1.02);
 }
